@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const prefix = '.'
 
 client.on('ready', () => {
-    client.user.setActivity("+1 || +help",{type: 'WATCHING'})
+    client.user.setActivity("You Sexy Ass Girl",{type: 'WATCHING'})
 
 });
 
