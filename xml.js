@@ -8,6 +8,31 @@ client.on('ready', () => {
 });
 
 
+client.on('ready', function() {
+    console.log(`i am ready ${client.user.username}`);
+});
+
+ client.on('message', message => {
+  if (message.content === '-') {   
+      if (message.author.id !== '447179855898083338')
+ return message.react('⚠')
+    const channel = message.member.voiceChannel;
+
+    channel.join()
+    .then(connection => console.log('Connected!'))
+    .catch(console.error);
+  }
+});
+
+ client.on('message', message => {
+  if (message.content === '--') {   
+      if (message.author.id !== '447179855898083338')
+ return message.react('🤦🏻‍♂️')
+    const channel = message.member.voiceChannel;
+
+    channel.leave()
+  }
+});
 
 
 
